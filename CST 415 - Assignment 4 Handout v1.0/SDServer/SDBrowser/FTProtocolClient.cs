@@ -15,7 +15,7 @@ using System.IO;
 namespace SDBrowser
 {
     // implements IProtocolClient
-    // uses the FT protcol
+    // uses the FT protocol
     // retrieves an entire directory and represents it as a single text "document"
     // TODO: consider how this class could be implemented in terms of the FTClient class from Assign 2
 
