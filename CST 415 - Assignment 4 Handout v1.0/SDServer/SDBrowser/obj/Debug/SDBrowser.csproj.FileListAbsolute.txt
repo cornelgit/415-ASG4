@@ -1,0 +1,14 @@
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\bin\Debug\SDBrowser.exe.config
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\bin\Debug\SDBrowser.exe
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\bin\Debug\SDBrowser.pdb
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\bin\Debug\PRSLib.dll
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\bin\Debug\PRSLib.pdb
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.csproj.AssemblyReference.cache
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.csproj.SuggestedBindingRedirects.cache
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.MainForm.resources
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.Properties.Resources.resources
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.csproj.GenerateResource.cache
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.csproj.CoreCompileInputs.cache
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.csproj.CopyComplete
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.exe
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.pdb

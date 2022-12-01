@@ -64,50 +64,103 @@ namespace SDServer
 
         public ulong OpenSession()
         {
-            // TODO: SessionTable.OpenSession()
-
             // allocate and return a new session to the caller
             // find a free sessionId
-            // allocate a new session instance
-            // save the session for later
-            
+            ulong sessionId = NextSessionId();
 
-            return 0;
+            // allocate a new session instance
+            Session session = new Session(sessionId);
+
+            // save the session for later
+            mutex.WaitOne();
+            sessions.Add(sessionId, session);
+            mutex.ReleaseMutex();
+
+            // return new session id
+            return sessionId;
         }
 
         public bool ResumeSession(ulong sessionID)
         {
-            // TODO: SessionTable.ResumeSession()
-
             // returns true only if sessionID is a valid and open sesssion, false otherwise
-            return false;
+            mutex.WaitOne();
+
+            // check if session is open
+            bool isOpen = sessions.ContainsKey(sessionID);
+
+            // release and return the result
+            mutex.ReleaseMutex();
+            return isOpen;
         }
 
         public void CloseSession(ulong sessionID)
         {
-            // TODO: SessionTable.CloseSession()
-
             // closes the session, will no longer be open and cannot be reused
-            // throws a session exception if the session is not open
 
+            // throws a session exception if the session is not open
+            mutex.WaitOne();
+
+            if (!sessions.ContainsKey(sessionID))
+            {
+                // unlock mutex before fast exit from this method!
+                mutex.ReleaseMutex();
+                throw new SessionException("Session not open and so cannot be closed!");
+            }
+
+            // close it!            
+            sessions.Remove(sessionID);
+            mutex.ReleaseMutex();
         }
 
         public string GetSessionValue(ulong sessionID, string key)
         {
-            // TODO: SessionTable.GetSessionValue()
-
             // retrieves a session value, given session ID and key
             // throws a session exception if the session is not open or if the value does not exist by that key
-            return "TODO";
+            
+            // lock mutex to prevent other threads from changing session table
+            mutex.WaitOne();
+
+            // throws a session exception if the session is not open
+            if (!sessions.ContainsKey(sessionID))
+            {
+                // unlock mutex before fast exit from this method!
+                mutex.ReleaseMutex();
+                throw new SessionException("Session not open and so cannot get value!");
+            }
+
+            // throws a session exception if the requested key does not exist in this session
+            Session session = sessions[sessionID];
+            if (!session.values.ContainsKey(key))
+            {
+                // unlock mutex before fast exit from this method!
+                mutex.ReleaseMutex();
+                throw new SessionException("Session does not contain a value for requested key!");
+            }
+
+            // retrieve value and release mutex
+            string value = session.values[key];
+            mutex.ReleaseMutex();
+            return value;
         }
 
         public void PutSessionValue(ulong sessionID, string key, string value)
         {
-            // TODO: SessionTable.PutSessionValue()
-
             // stores a session value by session ID and key, replaces value if it already exists
+
+            // lock mutex to prevent other threads from changing the session table
+            mutex.WaitOne();
+
             // throws a session exception if the session is not open
-            
+            if (!sessions.ContainsKey(sessionID))
+            {
+                // unlock mutex before fast exit from this method!
+                mutex.ReleaseMutex();
+                throw new SessionException("Session not open and so cannot put value!");
+            }
+
+            // store the value
+            sessions[sessionID].values[key] = value;
+            mutex.ReleaseMutex();
         }
     }
 }
