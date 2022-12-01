@@ -264,9 +264,29 @@ namespace SDServer
                     string documentName = reader.ReadLine();
                     Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Receiving get for " + documentName);
 
-                    // get the document content from the session table
-                    string documentContents = sessionTable.GetSessionValue(sessionId, documentName);
-                    Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Got contents " + documentContents);
+                    // validate the document name
+                    if (string.IsNullOrWhiteSpace(documentName))
+                    {
+                        throw new Exception("Empty document name!");
+                    }
+
+                    // determine if the client has requested a file or a session variable...
+                    string documentContents;
+                    if (documentName[0] == '/')
+                    {
+                        // get the contents of the file
+                        Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Retrieving file...");
+                        string documentPath = Path.Combine(Directory.GetCurrentDirectory(),documentName.TrimStart('/'));
+                        documentContents = File.ReadAllText(documentPath);
+                        Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Got contents " + documentContents);
+                    }
+
+                    else
+                    {
+                        // get the document content from the session table
+                        documentContents = sessionTable.GetSessionValue(sessionId, documentName);
+                        Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Got contents " + documentContents);
+                    }                   
 
                     // send success and document to the client
                     SendSuccess(documentName, documentContents);
@@ -303,9 +323,32 @@ namespace SDServer
                     string documentContents = ReceiveDocument(documentLength);
                     Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Received contents: " + documentContents);
 
-                    // put the document into the session
-                    sessionTable.PutSessionValue(sessionId, documentName, documentContents);
-                    Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Put contents in session table ");
+                    // validate the document name
+                    if (string.IsNullOrWhiteSpace(documentName))
+                    {
+                        throw new Exception("Empty document name!");
+                    }
+
+                    // determine if the client has requested a file or a session variable...
+                    if (documentName[0] == '/')
+                    {
+                        // append the contents to the file
+                        // get the contents of the file
+                        Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + " Appending file...");
+                        string documentPath = Path.Combine(Directory.GetCurrentDirectory(), documentName.TrimStart('/'));
+                        StreamWriter fileWriter = File.AppendText(documentPath);
+                        fileWriter.WriteLine();
+                        fileWriter.Write(documentContents);
+                        fileWriter.Close();
+                        fileWriter.Flush();
+                        Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Appended contents file...");
+                    }
+                    else
+                    {
+                        // put the document into the session
+                        sessionTable.PutSessionValue(sessionId, documentName, documentContents);
+                        Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Put contents in session table ");
+                    }                 
 
                     // send success to the client
                     SendSuccess();

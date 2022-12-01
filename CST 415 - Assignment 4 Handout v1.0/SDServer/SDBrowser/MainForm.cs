@@ -16,19 +16,20 @@ namespace SDBrowser
 
         public MainForm()
         {
-            // TODO: MainForm.MainForm()
             // default command line values
             string prsIP = "127.0.0.1";
             ushort prsPort = 30000;
 
-            // parse the command line and get the PRS Server's IP Address and Port number
+            // TODO: parse the command line and get the PRS Server's IP Address and Port number
             // -prs < PRS IP address>:< PRS port >
             // NOTE: args[0] is the name of the program, first true argument is at args[1]
-            //string[] args = Environment.GetCommandLineArgs();
+            // string[] args = Environment.GetCommandLineArgs();
             
 
             // instantiate the fetcher and add the support SD and FT protocols
-            
+            fetcher = new ContentFetcher();
+            fetcher.AddProtocol("FT", new FTProtocolClient(prsIP, prsPort));
+            fetcher.AddProtocol("SD", new SDProtocolClient(prsIP, prsPort)); // 45min mark
 
             InitializeComponent();
         }
