@@ -29,22 +29,35 @@ namespace SDBrowser
             // instantiate the fetcher and add the support SD and FT protocols
             fetcher = new ContentFetcher();
             fetcher.AddProtocol("FT", new FTProtocolClient(prsIP, prsPort));
-            fetcher.AddProtocol("SD", new SDProtocolClient(prsIP, prsPort)); // 45min mark
+            fetcher.AddProtocol("SD", new SDProtocolClient(prsIP, prsPort));
 
             InitializeComponent();
         }
 
         private void buttonGo_Click(object sender, EventArgs e)
         {
-            // TODO: MainForm.buttonGo_Click()
             // user clicked the Go! button
 
-            // grab the address from the address bar
-            
-            // fetch the content
-            
-            // put the content in the content box
-            
+            try
+            {
+                // grab the address from the address bar
+                string address = textboxAddress.Text;
+
+                if (string.IsNullOrWhiteSpace(address))
+                {
+                    throw new Exception("Hey! Enter an address!");
+                }
+
+                // fetch the content
+                string content = fetcher.Fetch(address);
+
+                // put the content in the content box
+                textboxContent.Text = content;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);                           
+            }            
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)

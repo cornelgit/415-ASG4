@@ -7,7 +7,7 @@
 
 using System;
 using System.Collections.Generic;
-
+using System.ComponentModel.Design;
 
 namespace SDBrowser
 {
@@ -17,9 +17,8 @@ namespace SDBrowser
 
         public ContentFetcher()
         {
-            // TODO: ContentFetcher.ContentFetcher()
             // initially empty protocols dictionary
-            
+            protocols = new Dictionary<string, IProtocolClient>();
         }
 
         public void Close()
@@ -31,9 +30,8 @@ namespace SDBrowser
 
         public void AddProtocol(string name, IProtocolClient client)
         {
-            // TODO: ContentFetcher.AddProtocol()
             // save the protocol client under the given name
-            
+            protocols.Add(name, client);
         }
 
         public string Fetch(string address)
@@ -46,17 +44,36 @@ namespace SDBrowser
             //      < type > is one of “SD” and “FT”
             //      < server IP > is the IP address of the server to contact
             //      < resource > is the name of the resource to request from the server
-            
+            if (string.IsNullOrWhiteSpace(address))
+            {
+                throw new Exception("Empty address!");
+            }
+            string[] parts = address.Split(':');
+            if (parts.Length != 3)
+            {
+                throw new Exception("Address requires three parts! < type >:< server IP >:< resource >");
+            }
+
+            // TODO: check that each part is non-empty
+
+            string type = parts[0];
+            string serverIP = parts[1];
+            string resource = parts[2];
 
             // retrieve the correct protocol client for the requested protocol
             // watch out for invalid type
-            
+            if (!protocols.ContainsKey(type))
+            {
+                throw new Exception("Invalid protocol type!");
+            }
+
+            IProtocolClient client = protocols[type];
 
             // get the content from the protocol client, using the given IP address and resource name
-            
+            string content = client.GetDocument(serverIP, resource);
             
             // return the content
-            return "TODO";
+            return content;
         }
     }
 }

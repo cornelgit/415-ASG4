@@ -95,7 +95,7 @@ namespace SDBrowser
             
 
             // return the content
-            return "TODO";
+            return "TODO: SDProtocolClient.GetDocument()";
         }
 
         public void Close()

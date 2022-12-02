@@ -66,7 +66,7 @@ namespace SDBrowser
             
 
             // return the content
-            return "TODO";
+            return "TODO: FTProtocolClient.GetDocument()";
         }
 
         public void Close()
