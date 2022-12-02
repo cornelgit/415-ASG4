@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29215.179
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDServer", "SDServer\SDServer.csproj", "{984B8103-99FA-4E64-85C5-9DAFF2EA075A}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRSLib", "..\PRSServer\PRSLib\PRSLib.csproj", "{7DF7F66B-D68D-4DDD-9326-988B6E6B2ABC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDBrowser", "SDBrowser\SDBrowser.csproj", "{15636AF5-E636-46AA-B0B6-5F74FB44911A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTLib", "..\FTServer\FTLib\FTLib.csproj", "{DFEB82CD-74AC-4F32-A3C8-490DBE61843B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{15636AF5-E636-46AA-B0B6-5F74FB44911A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15636AF5-E636-46AA-B0B6-5F74FB44911A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15636AF5-E636-46AA-B0B6-5F74FB44911A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFEB82CD-74AC-4F32-A3C8-490DBE61843B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFEB82CD-74AC-4F32-A3C8-490DBE61843B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFEB82CD-74AC-4F32-A3C8-490DBE61843B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFEB82CD-74AC-4F32-A3C8-490DBE61843B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

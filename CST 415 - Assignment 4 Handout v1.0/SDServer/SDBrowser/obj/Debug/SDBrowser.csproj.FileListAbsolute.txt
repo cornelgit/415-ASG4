@@ -12,3 +12,5 @@ C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrows
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.csproj.CopyComplete
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.exe
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\obj\Debug\SDBrowser.pdb
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\bin\Debug\FTLib.dll
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDBrowser\bin\Debug\FTLib.pdb

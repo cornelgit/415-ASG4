@@ -55,6 +55,10 @@
       <Project>{7df7f66b-d68d-4ddd-9326-988b6e6b2abc}</Project>
       <Name>PRSLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FTLib\FTLib.csproj">
+      <Project>{dfeb82cd-74ac-4f32-a3c8-490dbe61843b}</Project>
+      <Name>FTLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

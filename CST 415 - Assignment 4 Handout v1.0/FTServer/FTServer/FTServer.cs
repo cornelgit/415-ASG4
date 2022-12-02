@@ -29,21 +29,27 @@ namespace FTServer
 
         public void Start()
         {
-            // TODO: FTServer.Start()
-
             // create a listening socket for clients to connect
+            Socket listeningSocket = new Socket(SocketType.Stream, ProtocolType.Tcp);
+
             // bind to the FT Server port
+            listeningSocket.Bind(new IPEndPoint(IPAddress.Any, listeningPort));
+
             // set the socket to listen
+            listeningSocket.Listen(clientBacklog);
             
-            //bool done = false;
-            //while (!done)
+            // note: this server runs until process is killed by the OS
+            bool done = false;
+            while (!done)
             {
                 try
                 {
                     // accept a client connection
-                    
+                    Socket clientSocket = listeningSocket.Accept();
+
                     // instantiate connected client to process messages
-                    
+                    FTConnectedClient client = new FTConnectedClient(clientSocket);
+                    client.Start();
                 }
                 catch (Exception ex)
                 {
@@ -54,7 +60,7 @@ namespace FTServer
             }
 
             // close socket and quit
-            
+            listeningSocket.Close();
         }
     }
 }
