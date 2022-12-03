@@ -8,6 +8,8 @@
 using System;
 using PRSLib;
 using FTLib;
+using System.Collections.Generic;
+using System.IO;
 
 namespace FTClient
 {
@@ -106,8 +108,25 @@ namespace FTClient
                 ft.Connect();
 
                 // get the contents of the specified directory
-                ft.GetDirectory(DIRECTORY_NAME);
+                List<FTLib.FTClient.File> files = ft.GetDirectory(DIRECTORY_NAME);
+                                
+                // create the local directory if needed
+                DirectoryInfo di = new DirectoryInfo(DIRECTORY_NAME);
 
+                if (!di.Exists)
+                {
+                    di.Create();
+                }
+
+                // save the files locally on the disk
+                foreach (FTLib.FTClient.File f in files)
+                {
+                    string filePath = Path.Combine(DIRECTORY_NAME, f.Name);
+                    StreamWriter writer = File.CreateText(filePath);
+                    writer.Write(f.Contents);
+                    writer.Close();
+                }
+                
                 // disconnect from the server
                 ft.Disconnect();
                 
