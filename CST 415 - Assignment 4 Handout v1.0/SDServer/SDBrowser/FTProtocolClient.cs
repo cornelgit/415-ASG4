@@ -52,21 +52,33 @@ namespace SDBrowser
             FTClient ft = new FTClient(serverIP, ftPort);
             ft.Connect();
 
-            // get the requested directory
-            List<FTLib.FTClient.File> files = ft.GetDirectory(documentName);
+            try
+            {
+                List<FTLib.FTClient.File> files = ft.GetDirectory(documentName);
 
-            // combine file contents into one string 
-            string documentContents = "";
-            foreach (FTLib.FTClient.File f in files)
-            { 
-                // TODO: Start here after TG!
+                // combine file contents into one string
+                StringBuilder builder = new StringBuilder();
+                foreach (FTLib.FTClient.File f in files)
+                {
+                    builder.AppendLine(f.Name);
+                    builder.AppendLine(f.Contents);
+                    builder.AppendLine();
+                }
+
+                // get the requested directory
+                string documentContents = builder.ToString();
+
+                // disconnect from server and close the socket
+                ft.Disconnect();
+
+                // return the contents
+                return documentContents;
             }
-
-            // disconnect from server and close the socket
-            ft.Disconnect();
-
-            // return the contents
-            return documentContents;
+            catch(Exception ex)
+            {
+                ft.Disconnect();
+                throw ex;
+            }            
         }
 
         public void Close()

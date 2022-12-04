@@ -150,7 +150,7 @@ namespace FTLib
                 // handle error messages from the server
                 string errorMsg = reader.ReadLine();
                 Console.WriteLine("Error from server: " + errorMsg);
-                return null;
+                throw new Exception(errorMsg);
             }
 
             // received a file name
