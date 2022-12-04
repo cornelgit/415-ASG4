@@ -1,0 +1,11 @@
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\bin\Debug\FTServer.exe.config
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\bin\Debug\FTServer.exe
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\bin\Debug\FTServer.pdb
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\bin\Debug\PRSLib.dll
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\bin\Debug\PRSLib.pdb
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\obj\Debug\FTServer.csproj.AssemblyReference.cache
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\obj\Debug\FTServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\obj\Debug\FTServer.csproj.CoreCompileInputs.cache
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\obj\Debug\FTServer.csproj.CopyComplete
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\obj\Debug\FTServer.exe
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTServer\obj\Debug\FTServer.pdb
