@@ -1,0 +1,6 @@
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDLib\bin\Debug\SDLib.dll
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDLib\bin\Debug\SDLib.pdb
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDLib\obj\Debug\SDLib.csproj.AssemblyReference.cache
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDLib\obj\Debug\SDLib.csproj.CoreCompileInputs.cache
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDLib\obj\Debug\SDLib.dll
+C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDLib\obj\Debug\SDLib.pdb

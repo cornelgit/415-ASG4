@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.IO;
 using PRSLib;
+using SDLib;
 
 namespace SDClient
 {
@@ -122,7 +123,7 @@ namespace SDClient
                 SDSERVER_PORT = prs.LookupPort();
 
                 // create an SDClient to use in talking to the server
-                SDClient sd = new SDClient(SDSERVER_IPADDRESS, SDSERVER_PORT);
+                SDLib.SDClient sd = new SDLib.SDClient(SDSERVER_IPADDRESS, SDSERVER_PORT);
                 sd.Connect();
 
                 // send session command to server
