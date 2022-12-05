@@ -303,6 +303,7 @@ namespace SDServer
             else
             {
                 // error, cannot get without a session
+                // TODO: pull the document name out of the stream before sending the error back to the client!
                 SendError("No session open, cannot get!");
             }
         }
@@ -365,6 +366,7 @@ namespace SDServer
             else
             {
                 // error, cannot post without a session
+                // TODO: pull the document name, length, and contents out of the stream before sending the error back to the client
                 SendError("No session open, cannot post!");
             }
         }
