@@ -83,7 +83,6 @@ namespace SDBrowser
 
         public void Close()
         {
-            // TODO: FTProtocolClient.Close()
             // nothing to do here!
             // the FT Protocol does not expect a client to close a session
             // everything is handled in the GetDocument() method

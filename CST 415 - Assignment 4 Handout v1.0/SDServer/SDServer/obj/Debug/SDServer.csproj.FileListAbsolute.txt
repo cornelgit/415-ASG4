@@ -9,3 +9,14 @@ C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServe
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\obj\Debug\SDServer.csproj.CopyComplete
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\obj\Debug\SDServer.exe
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\obj\Debug\SDServer.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\bin\Debug\SDServer.exe.config
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\bin\Debug\SDServer.exe
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\bin\Debug\SDServer.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\bin\Debug\PRSLib.dll
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\bin\Debug\PRSLib.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\obj\Debug\SDServer.csproj.AssemblyReference.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\obj\Debug\SDServer.csproj.SuggestedBindingRedirects.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\obj\Debug\SDServer.csproj.CoreCompileInputs.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\obj\Debug\SDServer.csproj.CopyComplete
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\obj\Debug\SDServer.exe
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDServer\obj\Debug\SDServer.pdb

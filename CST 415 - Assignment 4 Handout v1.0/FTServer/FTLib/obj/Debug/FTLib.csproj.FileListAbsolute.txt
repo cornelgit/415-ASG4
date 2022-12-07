@@ -4,3 +4,9 @@ C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\o
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\obj\Debug\FTLib.csproj.CoreCompileInputs.cache
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\obj\Debug\FTLib.dll
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\obj\Debug\FTLib.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\bin\Debug\FTLib.dll
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\bin\Debug\FTLib.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\obj\Debug\FTLib.csproj.AssemblyReference.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\obj\Debug\FTLib.csproj.CoreCompileInputs.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\obj\Debug\FTLib.dll
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\FTServer\FTLib\obj\Debug\FTLib.pdb

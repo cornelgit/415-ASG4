@@ -62,9 +62,8 @@ namespace SDBrowser
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // TODO: MainForm.MainForm_FormClosed()
             // close the fetcher so it can close it's sessions with the servers
-
+            fetcher.Close();
         }
     }
 }

@@ -11,3 +11,16 @@ C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClien
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\obj\Debug\SDClient.pdb
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\bin\Debug\SDLib.dll
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\bin\Debug\SDLib.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\bin\Debug\SDClient.exe.config
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\bin\Debug\SDClient.exe
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\bin\Debug\SDClient.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\bin\Debug\PRSLib.dll
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\bin\Debug\SDLib.dll
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\bin\Debug\PRSLib.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\bin\Debug\SDLib.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\obj\Debug\SDClient.csproj.AssemblyReference.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\obj\Debug\SDClient.csproj.SuggestedBindingRedirects.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\obj\Debug\SDClient.csproj.CoreCompileInputs.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\obj\Debug\SDClient.csproj.CopyComplete
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\obj\Debug\SDClient.exe
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\SDServer\SDClient\obj\Debug\SDClient.pdb

@@ -4,3 +4,9 @@ C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib\obj\Debug\PRSLib.csproj.CoreCompileInputs.cache
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib\obj\Debug\PRSLib.dll
 C:\Users\C0rnel\Desktop\AS4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib\obj\Debug\PRSLib.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib\bin\Debug\PRSLib.dll
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib\bin\Debug\PRSLib.pdb
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib\obj\Debug\PRSLib.csproj.AssemblyReference.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib\obj\Debug\PRSLib.csproj.CoreCompileInputs.cache
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib\obj\Debug\PRSLib.dll
+C:\OITWORK\415-ASG4\CST 415 - Assignment 4 Handout v1.0\PRSServer\PRSLib\obj\Debug\PRSLib.pdb

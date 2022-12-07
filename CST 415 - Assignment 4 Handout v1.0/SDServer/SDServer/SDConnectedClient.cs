@@ -255,15 +255,15 @@ namespace SDServer
         {
             // handle a "get" request from the client
 
+            // get the document name from the client
+            string documentName = reader.ReadLine();
+            Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Receiving get for " + documentName);
+
             // if the client has a session open
             if (sessionId != 0)
             {
                 try
                 {
-                    // get the document name from the client
-                    string documentName = reader.ReadLine();
-                    Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Receiving get for " + documentName);
-
                     // validate the document name
                     if (string.IsNullOrWhiteSpace(documentName))
                     {
@@ -303,7 +303,6 @@ namespace SDServer
             else
             {
                 // error, cannot get without a session
-                // TODO: pull the document name out of the stream before sending the error back to the client!
                 SendError("No session open, cannot get!");
             }
         }
@@ -312,18 +311,18 @@ namespace SDServer
         {
             // handle a "post" request from the client
 
+            // get the document name, content length and contents from the client
+            string documentName = reader.ReadLine();
+            int documentLength = int.Parse(reader.ReadLine());
+            Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Receiving post for " + documentName);
+            string documentContents = ReceiveDocument(documentLength);
+            Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Received contents: " + documentContents);
+
             // if the client has a session open
             if (sessionId != 0)
             {
                 try
-                {
-                    // get the document name, content length and contents from the client
-                    string documentName = reader.ReadLine();
-                    int documentLength = int.Parse(reader.ReadLine());
-                    Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Receiving post for " + documentName);
-                    string documentContents = ReceiveDocument(documentLength);
-                    Console.WriteLine("[" + clientThread.ManagedThreadId.ToString() + "] " + "Received contents: " + documentContents);
-
+                {  
                     // validate the document name
                     if (string.IsNullOrWhiteSpace(documentName))
                     {
@@ -366,7 +365,6 @@ namespace SDServer
             else
             {
                 // error, cannot post without a session
-                // TODO: pull the document name, length, and contents out of the stream before sending the error back to the client
                 SendError("No session open, cannot post!");
             }
         }

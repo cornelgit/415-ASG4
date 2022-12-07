@@ -23,9 +23,11 @@ namespace SDBrowser
 
         public void Close()
         {
-            // TODO: ContentFetcher.Close()
             // close each protocol client
-            
+            foreach (IProtocolClient client in protocols.Values)
+            {
+                client.Close();
+            }
         }
 
         public void AddProtocol(string name, IProtocolClient client)
@@ -36,7 +38,6 @@ namespace SDBrowser
 
         public string Fetch(string address)
         {
-            // TODO: ContentFetcher.Fetch()
             // parse the address
             // Address format:
             //    < type >:< server IP >:< resource >
@@ -52,13 +53,16 @@ namespace SDBrowser
             if (parts.Length != 3)
             {
                 throw new Exception("Address requires three parts! < type >:< server IP >:< resource >");
-            }
-
-            // TODO: check that each part is non-empty
+            }            
 
             string type = parts[0];
             string serverIP = parts[1];
             string resource = parts[2];
+
+            if (string.IsNullOrEmpty(type) || string.IsNullOrEmpty(serverIP) || string.IsNullOrEmpty(resource))
+            {
+                throw new Exception("Address requires value for each part!");
+            }
 
             // retrieve the correct protocol client for the requested protocol
             // watch out for invalid type
