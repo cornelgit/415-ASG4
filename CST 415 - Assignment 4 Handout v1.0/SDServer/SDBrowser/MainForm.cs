@@ -23,7 +23,41 @@ namespace SDBrowser
             // -prs < PRS IP address>:< PRS port >
             // NOTE: args[0] is the name of the program, first true argument is at args[1]
             // string[] args = Environment.GetCommandLineArgs();
-            
+            string[] args = Environment.GetCommandLineArgs();
+
+            // process the command line arguments to get the PRS ip address and PRS port number
+            try
+            {
+
+                for (int i = 0; i < args.Length; i++)
+                {
+                    if (args[i] == "-prs")
+                    {
+                        if (i + 1 < args.Length)
+                        {
+                            // split serverIP:port
+                            string[] parts = args[++i].Split(':');
+                            prsIP = parts[0];
+                            prsPort = ushort.Parse(parts[1]);
+                        }
+                        else
+                        {
+                            throw new Exception("-prs requires a value!");
+                        }
+                    }
+                    else
+                    {
+                        // error! unexpected cmd line arg
+                        throw new Exception("Invalid cmd line arg: " + args[i]);
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error! " + ex.Message);
+                return;
+            }
 
             // instantiate the fetcher and add the support SD and FT protocols
             fetcher = new ContentFetcher();
