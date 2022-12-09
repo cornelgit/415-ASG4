@@ -20,7 +20,6 @@ namespace SDBrowser
             string prsIP = "127.0.0.1";
             ushort prsPort = 30000;
 
-            // TODO: parse the command line and get the PRS Server's IP Address and Port number
             // -prs < PRS IP address>:< PRS port >
             // NOTE: args[0] is the name of the program, first true argument is at args[1]
             // string[] args = Environment.GetCommandLineArgs();
